@@ -1,8 +1,20 @@
-import React from 'react';
+import React, {Component} from 'react';
+import User from '../App/User';
 
-const Header = () => (
-  <header>
-  </header>
-);
+
+
+class Header extends Component {
+
+	render () {
+		return (
+		<div className ="Header">
+	
+
+		</div>
+	);
+	}
+}
+
+
 
 export default Header;

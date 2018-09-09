@@ -17,6 +17,10 @@ import allReducers from './reducers';
 import App from './components/App/App';
 import NotFound from './components/App/NotFound';
 
+
+
+import { Title, List } from './components/App/App';
+
 import './styles/styles.scss';
 
 const store = createStore(
@@ -31,8 +35,7 @@ render((
     <Router>
       <App>
         <Switch>
-          <Route exact path="/" component={NotFound}/>
-          {/* <Route component={NotFound}/> */}
+          <Route exact path="/" component={NotFound} />
         </Switch>
       </App>
     </Router>
