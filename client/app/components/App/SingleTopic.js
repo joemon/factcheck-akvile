@@ -40,7 +40,6 @@ class SingleTopic extends React.Component {
         <div className="blue lighten-5">
           <NavBar />
                 <h5>Facts for: {this.state.topic.topic}</h5>
-                <h5>Facts for: {this.state.topic._id}</h5>
                    
                 <FactView topic= {this.state.topic._id} />
                    

@@ -14,7 +14,8 @@ class NavBar extends Component {
         <a href="/" className="brand-logo col s3 offset-s1 black-text text-darken-2 ">FactCheck</a>
         <ul id="nav-mobile" className="right hide-on-med-and-down col s5">
         <li><a href="/">Home</a></li>
-        <li><a href="./about">About us</a></li>
+        <li><a href="/about">About us</a></li>
+        <li><a href="/fc/">All fact checks</a></li>
         <User />
         
       </ul>

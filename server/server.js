@@ -42,16 +42,6 @@ var bodyParser = require("body-parser");
 
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.get("/yes", function(req, res){
-      res.send("Jes jes jes");
-      console.log('veikiu');
-});
-
-app.get("/veikia/:fact", function(req, res){
-    var fact = req.params.fact;
-    res.send("WELCOME TO THE " + fact.toUpperCase() + " PAGE");
-});
-
 
 
 app.get('/factsPath', function(req, res, next){
@@ -107,8 +97,8 @@ app.post('/addfact', function(req, res, next){
             if(err){
                 res.send(err);
             }
-            res.json(fact);
-           /* res.redirect("/");*/
+            /*res.json(fact);*/
+            res.redirect("/");
         });
     }
 });

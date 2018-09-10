@@ -35,7 +35,7 @@ render((
     <Router>
       <App>
         <Switch>
-          <Route exact path="/" component={NotFound} />
+          <Route exact path="/" component={App} />
         </Switch>
       </App>
     </Router>

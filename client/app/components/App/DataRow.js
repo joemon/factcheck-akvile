@@ -72,7 +72,6 @@ class DataRow extends React.Component {
 					    	
 					    	<hr />
 					    	 
-							 
 							 <strong>Tags:</strong>
 							 	<ul>{this.props.info.tags.map(item =>
                        				 <li key={item._id}>

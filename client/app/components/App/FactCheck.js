@@ -5,9 +5,11 @@ import DataRow from './DataRow';
 import axios from 'axios';
 import FactForm from './FactForm';
 import TopicForm from './TopicForm';
+import Footerr from "../Footer/Footer";
+import NavBar from "../Header/NavBar";
 
 
-
+//a class where tabs can be searched by tags
 class FactCheck extends React.Component {
   constructor(props) {
     super(props);
@@ -48,8 +50,9 @@ class FactCheck extends React.Component {
   render() {
 
  return (
+
       <div>
-        
+        <NavBar/>
         <table className="titleBar">
           <tbody>
               <td width="4"/>
@@ -67,6 +70,7 @@ class FactCheck extends React.Component {
             </Modal>
       		</div>
      {this.state.facts}
+     <Footerr />
       </div>
       )
   }

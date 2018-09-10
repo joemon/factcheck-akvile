@@ -13,24 +13,16 @@ class FactView extends React.Component {
     super(props);
     this.state = {
       items: [], 
-      /*topic: props.topic, */ 
-      topic: '', 
+      topic: '',
     } ;
-    
   }
   
 
-  //get all the results
-  componentDidMount() {
-  console.log(this.props.params.id);
-   /* var id = this.state.topic*/
-   console.log("cia mano state " + this.props.topic)
-   console.log("cia mano antra state" + this.state.topic)
-  /* console.log(this.props.match.params.id);
-   console.log(this.props.match.params.topic);*/
+  //get all the results by the topic
+  componentDidUpdate() {
     axios.get('/tagspath', {
       params:{
-        topicID: props.topic,
+        topicID: this.props.topic,
       }
     }).then(res => {
     
@@ -48,10 +40,9 @@ class FactView extends React.Component {
     
   }
 
- 
+
 
 render() {
-
 return (
       <div>
         
