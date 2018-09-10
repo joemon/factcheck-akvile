@@ -103,50 +103,6 @@ app.post('/addfact', function(req, res, next){
     }
 });
 
-/*app.get("/topics/:id", function(req, res){
-    db.topics.findById({_id: mongojs.ObjectId(req.params.id)}, function(err, topic){
-        if(err){
-            res.send("There has been an error");
-        }
-        res.send("Vis tiek veikiu");
-        res.json(topic);
-    });
-});*/
-
-
-/*app.post('/addtopic', function(req, res, next){
-    var topic = req.body;
-    if(!fact.fact){
-        res.status(400);
-        res.json({
-            "error": "Something wrong with the data"
-        });
-    } else {
-        db.facts.save(topic, function(err, fact){
-            if(err){
-                res.send(err);
-            }
-            res.json(fact);
-        });
-    }
-});*/
-
-/*app.post('/addtopic', function(req, res, next){
-   var newTopic = req.body.topic;
-   res.send("Veikia")
-});
-*/
-
-/*app.post("/addtopic", (req, res) => {
-  var topic = req.body.topic;
-  db.topics.save()
-    .then(item => {
-      res.send("Topic saved to the database");
-    })
-    .catch(err => {
-      res.status(400).send("Unable to save to the database");
-    });
-});*/
 
 app.post('/addtopic', function(req, res, next){
     var newTopic = req.body;
@@ -237,93 +193,7 @@ app.get('/topics/:id', function(req, res, next){
     });
 });
 
-//kazkas negerai su skliaustais
-/*app.post('/addfact', function(req, res, next){
-    var fact = req.body;
-    var tagText = req.body.tagText;
-    var changed = {};
 
-    var tag : {
-      'type': tagText
-    }
- 
-    if(!fact){
-        res.status(400);
-        res.json({
-            "error":"Wrong data"
-        });
-    } else {
-        db.facts.update({_id: mongojs.ObjectId(req.params.id)},{$push:{tags:tag}}), {}, function(err, todo){
-            if(err){
-                res.send(err);
-            }
-            res.json(fact);
-        });
-    }
-});*/
-
-
-
-//example
-/*app.put('/addfact', function(req, res, next){
-    var fact = req.body;
-    var updatedFact = {};
- 
-    if(todo.isDone){
-        updatedFact.isDone = fact.isDone;
-    }
- 
-    if(fact.tags){
-        updtodo.title = todo.title;
-    }
- 
-    if(!updtodo){
-        res.status(400);
-        res.json({
-            "error":"Bad Data"
-        });
-    } else {
-        db.facts.update({_id: mongojs.ObjectId(req.params.id)},updtodo, {}, function(err, todo){
-            if(err){
-                res.send(err);
-            }
-            res.json(todo);
-        });
-    }
-});*/
-
-/*app.put('/addfact', (req, res, next) => {  
-  var newTag = {
-    text: req.body.tag,
-  };
-  Fact.findByIdAndUpdate(
-    {_id: req.body.id}, 
-    {$push: {
-      tags: newTag}
-    },
-    function(error,success){
-      if (error) {
-        console.log (error);
-      } else {
-        console.log(success);
-        console.log('added a tag' + newTag)
-    }
-  })
-});
-*/
-
-/*facts.findByIdAndUpdate(id,
-    {$push: {tags: tag}},
-    {safe: true, upsert: true},
-    function(err, doc) {
-        if(err){
-        console.log(err);
-        }else{
-        //do stuff
-        }
-    }
-);
-*/
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
